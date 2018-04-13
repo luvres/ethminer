@@ -19,6 +19,9 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 
 #### ETI -> comining.io (Default)
 ```
+nvidia-docker run -ti --rm --name Ethminer-nvidia-eti izone/ethminer:nvidia
+```
+```
 nvidia-docker run -ti --rm --name Ethminer-nvidia-eti \
 -e POOL="s.comining.io" \
 -e PORT="9999" \
