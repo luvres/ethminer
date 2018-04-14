@@ -1,4 +1,4 @@
-## Ethminer NVIDIA Ethash
+## Ethminer NVIDIA Ethash -> ( -U Nvidia | -G AMD )
 -----
 
 ### NVIDIA Docker (https://github.com/NVIDIA/nvidia-docker)
@@ -18,11 +18,14 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 ### Run
 
 #### ETI -> comining.io (Default)
+
+##### NVIDIA
 ```
 nvidia-docker run -ti --rm --name Ethminer-nvidia-eti izone/ethminer:nvidia
 ```
 ```
 nvidia-docker run -ti --rm --name Ethminer-nvidia-eti \
+-e GPU="U" \
 -e POOL="s.comining.io" \
 -e PORT="9999" \
 -e USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z" \
@@ -33,6 +36,7 @@ izone/ethminer:nvidia
 ```
 docker run -ti --rm --name Ethminer-amd-eti \
 --device /dev/kfd --device /dev/dri \
+-e GPU="G" \
 -e POOL="s.comining.io" \
 -e PORT="9999" \
 -e USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z" \
@@ -42,9 +46,6 @@ izone/ethminer:amd
 -----
 #### Build
 ```
-docker build -t izone/ethminer:nvidia .
-```
-```
-docker build -t izone/ethminer:amd -f Dockerfile_amd .
+docker build -t izone/ethminer .
 ```
 
