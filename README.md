@@ -29,9 +29,22 @@ nvidia-docker run -ti --rm --name Ethminer-nvidia-eti \
 izone/ethminer:nvidia 
 ```
 
+#### AMDGPU
+```
+docker run -ti --rm --name Ethminer-amd-eti \
+--device /dev/kfd --device /dev/dri \
+-e POOL="s.comining.io" \
+-e PORT="9999" \
+-e USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z" \
+izone/ethminer:amd
+```
+
 -----
 #### Build
 ```
 docker build -t izone/ethminer:nvidia .
+```
+```
+docker build -t izone/ethminer:amd -f Dockerfile_amd .
 ```
 
