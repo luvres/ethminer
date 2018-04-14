@@ -2,7 +2,7 @@ FROM izone/amdgpu:17.40.2712
 MAINTAINER Leonardo Loures <luvres@hotmail.com>
 
 ENV \
-	GPU="U"
+	GPU="U" \
 	POOL="s.comining.io" \
 	PORT="9999" \
 	USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z"
