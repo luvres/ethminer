@@ -21,7 +21,7 @@ nvidia-docker run --rm nvidia/cuda nvidia-smi
 
 ##### NVIDIA
 ```
-nvidia-docker run -ti --rm --name Ethminer-nvidia-eti izone/ethminer:nvidia
+nvidia-docker run -ti --rm --name Ethminer-nvidia-eti izone/ethminer
 ```
 ```
 nvidia-docker run -ti --rm --name Ethminer-nvidia-eti \
@@ -29,7 +29,7 @@ nvidia-docker run -ti --rm --name Ethminer-nvidia-eti \
 -e POOL="s.comining.io" \
 -e PORT="9999" \
 -e USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z" \
-izone/ethminer:nvidia 
+izone/ethminer
 ```
 
 #### AMDGPU
@@ -40,7 +40,7 @@ docker run -ti --rm --name Ethminer-amd-eti \
 -e POOL="s.comining.io" \
 -e PORT="9999" \
 -e USER="A8bW7QQtc8igRn5EEZgoBBD.1uvr3z" \
-izone/ethminer:amd
+izone/ethminer
 ```
 
 -----
